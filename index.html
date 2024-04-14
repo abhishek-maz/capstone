@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles_sheet.css">
+    <script src="index.js"></script>
+    <title>EC2 Instance Control</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Cloud Resource Manager - EC2 Control</h1>
+    </div>
+
+    <div id="navButtons">
+        <a href="index.html" title="EC2 Control">EC2 Control</a>
+        <a href="S3-new-index.html" title="S3 Upload">S3 Upload</a>
+    </div>
+
+    <div id="ec2Control" class="container">
+        <h2>EC2 Instance Control</h2>
+        <label for="instanceId">Enter Instance ID:</label>
+        <input type="text" id="instanceId" name="instanceId">
+
+        <label for="instanceName">Enter Instance Name:</label>
+        <input type="text" id="instanceName" name="instanceName">
+
+        <label for="amiId">Enter AMI ID:</label>
+        <input type="text" id="amiId" name="amiId">
+
+        <select id="action">
+            <option value="stop">Stop</option>
+            <option value="start">Start</option>
+            <option value="terminate">Terminate</option>
+            <option value="create">Create</option>
+        </select>
+
+        <button onclick="performAction()">Perform Action</button>
+        <button onclick="listInstances()">List Instances</button>
+        <div id="instanceInfo"></div>
+    </div>
+
+</body>
+
+</html>
